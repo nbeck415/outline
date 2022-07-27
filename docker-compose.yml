@@ -16,6 +16,8 @@ services:
     user: "postgres:postgres"
   s3:
     image: lphoward/fake-s3
+    labels:
+      shipyard.route: '/'
     ports:
       - "127.0.0.1:4569:4569"
     volumes:
